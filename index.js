@@ -13,10 +13,13 @@ import AssignmentRoutes from "./Kanbas/Assignments/routes.js";
 const app = express();
 
 
-app.use(cors({
-    credentials: true,
-    origin: "*",
-}));
+app.use(
+    cors({
+      credentials: true,
+      origin: process.env.NETLIFY_URL || "http://localhost:3000",
+    })
+   );
+
 app.use(express.json());
 
 const sessionOptions = {
