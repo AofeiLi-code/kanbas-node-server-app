@@ -1,6 +1,6 @@
 import Database from "../Database/index.js";
 
-import model from "./model.js"; // 引入 Mongoose 的 Assignment 模型
+import model from "./model.js";
 
 export function findAssignments(courseId) {
     return model.find({ course: courseId });
